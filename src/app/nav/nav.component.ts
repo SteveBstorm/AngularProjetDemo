@@ -10,15 +10,15 @@ import { Link } from './Link'
 })
 export class NavComponent implements OnInit {
 
-  isAuth : boolean
+  //isAuth : boolean
 
   listeLien : Link[]
   constructor(
-    private _auth : AuthwithSubjectService
+    //private _auth : AuthwithSubjectService
   ) { }
 
   ngOnInit(): void {
-    this._auth.mySubject.subscribe((x : boolean) => this.isAuth = x)
+    //this._auth.mySubject.subscribe((x : boolean) => this.isAuth = x)
 
     this.listeLien = [
       {url : '/home', title: 'Home'},

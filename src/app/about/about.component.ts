@@ -8,13 +8,15 @@ import { AuthwithSubjectService } from '../demo/component/demo16/authwith-subjec
 })
 export class AboutComponent implements OnInit {
 
+  // Tout décommenter pour la démo 16
+
   constructor(
-    private _auth : AuthwithSubjectService
+    //private _auth : AuthwithSubjectService
   ) { }
 
   ngOnInit(): void {
   }
-
+/*
   login() {
     this._auth.login()
   }
@@ -22,5 +24,6 @@ export class AboutComponent implements OnInit {
   logout() {
     this._auth.logout()
   }
+  */
 
 }

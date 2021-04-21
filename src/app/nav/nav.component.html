@@ -38,7 +38,8 @@
     </li>
 </ul> -->
 
-<ul *ngIf="isAuth">
+<!-- <ul *ngIf="isAuth"> a décommenter a partir de la démo 16 -->
+<ul>
     <li *ngFor="let lien of listeLien; let i = index">
         <a [routerLink]="lien.url" 
             (click)="toggleVisible(i)"
