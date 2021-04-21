@@ -1,0 +1,4 @@
+<h3>Demo Resolver</h3>
+<p *ngFor="let item of liste; let i = index">
+    <a [routerLink]="['../resolved/'+i]">{{item}}</a>
+</p>

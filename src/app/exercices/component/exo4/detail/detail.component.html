@@ -1,0 +1,13 @@
+<h3>
+    Profil de {{currentFan.nom}}
+</h3>
+<div style="border: 2px chartreuse dashed;">
+    Date de naissance : {{currentFan.dateNaissance | date : 'dd-MM-yyyy'}}
+    <div *ngIf="currentFan.series.length > 0">
+        <ol>
+            <li *ngFor="let s of currentFan.series">
+                {{s}}
+            </li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<h3>Custom Validators</h3>
+<form [formGroup]="myForm">
+    <p>
+        Mon champ : <input type="text" formControlName="myControl1">
+    </p>
+    <p *ngIf="myForm.controls['myControl1'].invalid">
+        {{myForm.controls['myControl1'].errors['TropCourtError']}}
+    </p>
+    <p>
+        Mon champ : <input [ngClass]="{error : myForm.controls['myControl2'].invalid }" type="text" formControlName="myControl2">
+    </p>
+    <p *ngIf="myForm.controls['myControl2'].invalid">
+        {{myForm.controls['myControl2'].errors['myError']}}
+    </p>
+    <p *ngIf="myForm.controls['myControl2'].invalid">
+        {{myForm.controls['myControl2'].errors['myOtherError']}}
+    </p>
+    <button [disabled]="myForm.invalid">Click</button>
+</form>

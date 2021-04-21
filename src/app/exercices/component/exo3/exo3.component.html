@@ -1,0 +1,10 @@
+<h3>Shopping list ++</h3>
+<input type="text" [(ngModel)]="article">
+<button (click)="ajout()">Ajouter</button>
+
+<hr />
+<app-liste2 [liste]="liste"
+            (addQty)="addQuantite($event)"
+            (remQty)="removeQuantite($event)"
+            (supprimer)="supprimer($event)">
+        </app-liste2>

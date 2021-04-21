@@ -1,0 +1,17 @@
+<h3>Component Directive</h3>
+
+<h4>NgStyle</h4>
+<p appHighlight [ngStyle]="currentStyle">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem temporibus ea atque, perferendis ipsa dolore pariatur quam animi impedit deleniti sapiente vel quis aspernatur beatae fuga ipsum aut. Iste, quo.
+</p>
+
+<button (click)="switchItalic()">Italic</button> &nbsp; 
+<button (click)="switchBold()">Bold</button> &nbsp; 
+<button (click)="switchSize()">Size</button>
+
+<hr />
+<h4>NgClass</h4>
+<p [ngClass]="{maClasse : class}">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit maxime, earum minima optio nobis iste vero pariatur labore praesentium et nesciunt veniam fugiat! Officiis obcaecati inventore iure quaerat maxime suscipit!
+</p>
+<button (click)="switchClass()">Appliquer classe</button>

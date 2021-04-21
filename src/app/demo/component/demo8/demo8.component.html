@@ -1,0 +1,11 @@
+<h3>Demo Input/output</h3>
+<div style="border : 1px black dashed">
+    Contenu du composant parent
+    <p>Propriété from children : {{myProp}}</p>
+</div>
+<app-enfant 
+    title="Titre compo enfant" 
+    [message]="message"
+    (monEvent)="reactToChildren($event)">
+    <p style="color : red">Contenu de l'enfant défini dans l'appel côté parent</p>
+</app-enfant>

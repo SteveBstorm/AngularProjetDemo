@@ -1,0 +1,7 @@
+<h3>Demo Session</h3>
+
+<button *ngIf="userNameSession == null" (click)="login()">Connexion</button>
+<button *ngIf="userNameSession != null" (click)="logout()">Déconnexion</button>
+
+<p>Utilisateur stocké en session storage : {{userNameSession}}</p>
+<p>Utilisateur stocké en local storage : {{userNameLocal}}</p>

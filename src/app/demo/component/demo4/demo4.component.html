@@ -1,0 +1,5 @@
+<h3>Contenu de myProp : {{myProp}}</h3>
+<input type="number" [(ngModel)]="myProp">
+<button (click)="changeValue()" [disabled]="bool">Click ici</button>
+<button (click)="changeValue()" [disabled]="myProp < 5">Click ici</button>
+<a [href]="url">vers google</a>

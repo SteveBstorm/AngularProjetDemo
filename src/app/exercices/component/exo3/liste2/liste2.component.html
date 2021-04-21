@@ -1,0 +1,9 @@
+<h3>Panier de courses</h3>
+<ul>
+    <li *ngFor="let article of liste; let i = index">
+        {{article.qty}} - {{article.nom}}
+        <button (click)="del(i)">-X-</button> &nbsp; 
+        <button (click)="add(i)">+</button> &nbsp; 
+        <button (click)="rem(i)">-</button> 
+    </li>
+</ul>

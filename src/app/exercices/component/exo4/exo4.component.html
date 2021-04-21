@@ -1,0 +1,9 @@
+<h3>Liste de fans</h3>
+<a routerLink="/exo/exo4/new">Ajouter un fan</a>
+<ol>
+    <li *ngFor="let fan of listeFan; let i = index">
+        <a [routerLink]="['/exo/exo4/detail/'+i]">{{fan.nom}}</a> &nbsp;
+        <button (click)="update(i)">Update</button>&nbsp; 
+        <button (click)="delete(i)">X</button>
+    </li>
+</ol>

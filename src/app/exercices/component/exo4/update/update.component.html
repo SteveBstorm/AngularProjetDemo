@@ -1,0 +1,24 @@
+<h3>Mise à jour du profil de {{currentFan.nom}}</h3>
+<form [formGroup]="fg" (ngSubmit)="submitFan()">
+    <div style="border: 1px black solid; padding : 5px">
+        <p>
+            <label>Nom : </label>
+            <input type="text" formControlName="nom">
+        </p>
+        <p>
+            <label>Date de naissance : </label>
+            <input type="date" formControlName="dateNaiss">
+        </p>
+        <div *ngIf="fg.controls['dateNaiss'].invalid" style="color : red;">
+            {{fg.controls['dateNaiss'].errors['dateError']}}
+        </div>
+    </div>
+    <a (click)="addSerie()" style="cursor: pointer;">Ajouter une série</a>
+    <div *ngIf="getSeries().controls" formArrayName="series">
+        <p *ngFor="let s of getSeries().controls;let i = index;">
+            Série {{i+1}} <input type="text" [formControlName]="i">
+            <button (click)="removeSerie(i)">X</button>
+        </p>
+    </div>
+    <button type="submit" [disabled]="fg.invalid">Valider</button>
+</form>

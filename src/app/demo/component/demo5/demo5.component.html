@@ -1,0 +1,18 @@
+<h3>Les Pipes</h3>
+
+<p>Uppercase : {{maVar1 | uppercase}}</p>
+<p>Lowercase : {{maVar1 | lowercase}}</p>
+<p>Titlecase : {{maVar1 | titlecase}}</p>
+
+<p>DecimalPipe : {{maVar2 | number : '1.2-3'}}</p>
+<p>CurrencyPipe : {{maVar2 | currency : 'EUR'}}</p>
+
+<p>Date par défaut : {{maVar3}}</p>
+<p>DatePipe : {{maVar3 | date : 'EEEE dd MMMM yyyy HH'}}</p>
+<hr />
+<h3>Custom Pipe</h3>
+<p>Temperature avec toFarhenheit : {{temperature | toFarhenheit}}</p>
+
+<p>Valeur de départ : {{temperature}}</p>
+<p>Temperature en Celcius : {{temperature | temperature : 'c' | number : '1.1-3'}}</p>
+<p>Temperature en Farhenheit : {{temperature | temperature : 'f'}}</p>

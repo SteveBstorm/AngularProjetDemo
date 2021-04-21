@@ -1,0 +1,54 @@
+<!-- Menu en dur
+    <ul>
+    <li>
+        <a routerLink="about">About</a> 
+    </li>
+    <li>
+        <a routerLink="home">Home</a>
+    </li>
+</ul>
+<h4>Demos</h4>
+<ol>
+    <li>
+        <a routerLink="demo/demo1">Binding one-way</a>
+    </li>
+    <li>
+        <a routerLink="demo/demo2">Binding two-way</a>
+    </li>
+    <li>
+        <a routerLink="demo/demo3">Event Binding</a>
+    </li>
+    <li>
+        <a routerLink="demo/demo4">Attribute Binding</a>
+    </li>
+    <li>
+        <a routerLink="demo/demo5">Les Pipes</a>
+    </li>
+    <li>
+        <a routerLink="demo/demo6">Component Directives</a>
+    </li>
+    <li>
+        <a routerLink="demo/demo7">Structural Directives</a>
+    </li>
+</ol>
+<h4>Exercices</h4>
+<ul>
+    <li>
+        <a routerLink="exo/exo1">Chronomètre</a>
+    </li>
+</ul> -->
+
+<ul *ngIf="isAuth">
+    <li *ngFor="let lien of listeLien; let i = index">
+        <a [routerLink]="lien.url" 
+            (click)="toggleVisible(i)"
+            [ngClass]="{master : lien.children}">
+            {{lien.title}}
+        </a>
+        <ul *ngIf="lien.children && lien.isVisible">
+            <li *ngFor="let enfant of lien.children; let i = index">
+                <a [routerLink]="enfant.url">{{i+1}} - {{enfant.title}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>

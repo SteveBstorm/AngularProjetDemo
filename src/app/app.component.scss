@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    height: 50px;
+    padding: 25px;
+    top : 0;
+    left : 0;
+    width: 100%;
+    background-color: darkgrey;
+}
+
+.content {
+    position: absolute;
+    top : 100px;
+    left : 20%;
+    padding: 30px;
+}
+
+.nav {
+  position: fixed;
+  overflow-y: scroll; 
+  width: 20%; 
+  top: 100px;
+  left : 0;
+  height : 85%;
+  border: black 2px solid;
+}

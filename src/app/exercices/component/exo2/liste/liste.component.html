@@ -1,0 +1,9 @@
+<h3>Mon panier</h3>
+<ul>
+    <li *ngFor="let article of liste; let i = index">
+        <p>
+            {{article}} &nbsp; 
+            <button (click)="deleteItem(i)">-X-</button>
+        </p>
+    </li>
+</ul>

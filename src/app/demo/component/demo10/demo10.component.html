@@ -1,0 +1,25 @@
+<h3>Formulaire</h3>
+
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <p>
+        <label>E-mail : </label>
+        <input type="email" formControlName="email"> 
+        <br /><label *ngIf="!myForm.get('email').valid">
+            L'email n'est pas valide
+        </label>
+    </p>
+    <p>
+        <label>Login : </label>
+        <input type="text" formControlName="login"> 
+    </p>
+    <h4>FormArray</h4>
+    <button type="button" (click)="addControl()">+</button>
+    <div formArrayName="film">
+        <p *ngFor="let c of getArray().controls; let i = index">
+            <input type="text" [formControlName]="i">
+        </p>
+    </div>
+    <p>
+        <button type="submit" [disabled]="myForm.invalid">Valider</button>
+    </p>
+</form>
